@@ -5,4 +5,4 @@ This folder contains a copy of the BenchmarkDotNet HTML report.
 
 Files:
 - `report.html` — HTML copy of the benchmark results.
-[result](https://github.com/1kramer1/driverMatching/blob/main/result.png)
+![image alt](https://github.com/1kramer1/driverMatching/blob/main/result.png)
