@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>DriverMatching Benchmark Report</title>
+<style type="text/css">
+    table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+    td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+    tr { background-color: #fff; border-top: 1px solid #ccc; }
+    tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<h1>DriverMatching — Benchmark Report</h1>
+<p>This is a copy of the BenchmarkDotNet HTML report generated during local runs.</p>
+
+<pre><code>
+BenchmarkDotNet v0.13.8, Windows 10 (10.0.19045.6456/22H2/2022Update)
+INTEL XEON E5 2670 V3, 1 CPU, 24 logical and 12 physical cores
+.NET SDK 7.0.401
+  [Host]     : .NET 7.0.11 (7.0.1123.42427), X64 RyuJIT AVX2
+  DefaultJob : .NET 7.0.11 (7.0.1123.42427), X64 RyuJIT AVX2
+</code></pre>
+
+<table>
+<thead><tr><th>Method</th><th>DriverCount</th><th>Mean</th><th>Error</th><th>StdDev</th><th>Gen0</th><th>Gen1</th><th>Gen2</th><th>Allocated</th></tr></thead>
+<tbody>
+<tr><td>BruteForce_FindNearest</td><td>1000</td><td>3,394.0 &mu;s</td><td>25.21 &mu;s</td><td>22.35 &mu;s</td><td>42.9688</td><td>-</td><td>-</td><td>181.25 KB</td></tr>
+<tr><td>KDTree_FindNearest</td><td>1000</td><td>347.9 &mu;s</td><td>4.43 &mu;s</td><td>3.93 &mu;s</td><td>22.9492</td><td>-</td><td>-</td><td>93.75 KB</td></tr>
+<tr><td>Grid_FindNearest</td><td>1000</td><td>39,898.9 &mu;s</td><td>794.66 &mu;s</td><td>1,087.75 &mu;s</td><td>12000.0000</td><td>76.9231</td><td>-</td><td>49316.69 KB</td></tr>
+<tr><td>BruteForce_FindNearest</td><td>10000</td><td>31,921.6 &mu;s</td><td>531.75 &mu;s</td><td>497.40 &mu;s</td><td>-</td><td>-</td><td>-</td><td>181.29 KB</td></tr>
+<tr><td>KDTree_FindNearest</td><td>10000</td><td>427.0 &mu;s</td><td>3.31 &mu;s</td><td>3.09 &mu;s</td><td>22.9492</td><td>-</td><td>-</td><td>93.75 KB</td></tr>
+<tr><td>Grid_FindNearest</td><td>10000</td><td>714,175.1 &mu;s</td><td>13,941.03 &mu;s</td><td>23,672.93 &mu;s</td><td>52000.0000</td><td>51000.0000</td><td>26000.0000</td><td>288847.49 KB</td></tr>
+</tbody>
+</table>
+
+</body>
+</html>
